@@ -8,3 +8,12 @@
 # (Make sure to capitalize the first word in the decoded message)
 
 p "Enter in the secret you want to decode"
+user_message = gets.chomp
+
+decoded_message = user_message.gsub("1","a")
+decoded_message = decoded_message.gsub("2","e")
+decoded_message = decoded_message.gsub("3","i")
+decoded_message = decoded_message.gsub("4","o")
+decoded_message = decoded_message.gsub("5","u")
+
+p decoded_message.capitalize
