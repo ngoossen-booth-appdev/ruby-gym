@@ -7,3 +7,4 @@
 p "Enter two words separated by a comma"
 
 user_words = gets.chomp
+
