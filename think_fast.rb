@@ -28,8 +28,64 @@ unpredictable_inputs = [
 ]
 
 some_random_input = unpredictable_inputs.sample
+require( "date")
 
 p some_random_input
 
 # Write your code below
 
+if some_random_input.class == String
+  p ""+some_random_input.downcase+""
+end
+
+if some_random_input.class == Time
+  dow=some_random_input.wday
+  if dow==0
+    p "sunday"
+  elsif dow==1
+    p "monday"
+    elsif dow==2
+      p"tuedsay"
+      elsif dow == 3
+        p"wednesday"
+      elsif dow ==4
+        p"thursday"
+        elsif dow == 5
+          p "friday"
+        else
+          p "saturday"
+        end
+
+  #p""+some_random_input.day.to_s.downcase+""
+end
+
+if some_random_input.class == Integer
+  if some_random_input.even? == true
+    p ""+some_random_input.to_s+" is even"
+  else
+    p ""+some_random_input.to_s+" is odd"
+  end
+end
+
+
+
+
+if some_random_input.class == Symbol
+  p ":"+some_random_input.to_s.downcase+""
+end
+
+if some_random_input.class == NilClass
+  p "no object provided"
+end
+
+if some_random_input.class == TrueClass
+  p "you may pass"
+end
+
+if some_random_input.class == FalseClass
+  p "you may not pass"
+end
+
+if some_random_input.class == Hash
+  p some_random_input.keys
+end
