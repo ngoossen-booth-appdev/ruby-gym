@@ -37,3 +37,24 @@
 
 
 p "Enter an integer"
+number = gets.chomp.to_i
+
+pling=""
+plang=""
+plong=""
+if number%3==0
+  pling = "Pling"
+end
+if number%5==0
+  plang= "Plang"
+end
+if number%7==0
+  plong= "Plong"
+end
+
+
+if pling==""&&plang==""&&plong==""
+  p ""+number.to_s+""
+else
+  p ""+pling+""+plang+""+plong+""
+end
