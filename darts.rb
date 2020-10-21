@@ -29,3 +29,25 @@
 #     (x-j)^2 + (y-k)^2 = r^2
 
 p "Enter X,Y coordinates in the format 'X,Y'"
+coords = gets.chomp.split(",")
+
+x=coords[0].to_f
+y=coords[1].to_f
+j=0.0
+k=0.0
+r=(((x-j)**2) + ((y-k)**2))**0.5
+# p x
+# p y
+# p j
+# p k
+# p r
+if r<=1#the dart lands in the inner ring, 10 points
+  points=10
+elsif r>1 && r<=5
+  points=5
+elsif r>5 && r<=10
+  points = 1  
+else
+  points = 0
+end
+ p "" +points.to_s+ " points"
